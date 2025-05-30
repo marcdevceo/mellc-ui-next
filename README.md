@@ -1,40 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🧩 MELLC UI Framework
 
-## Getting Started
+A custom design system and component library built with Tailwind CSS + React. Inspired by React Native’s structure, this framework brings consistency, scalability, and developer joy to every web project I build.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 What It Is
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is my personal UI framework — used across my projects to streamline:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Typography (`<Title />`, `<Subtitle />`, `<Text />`)
+- Spacing (`<Spacer />`, `<Main />`, `gapClass`, `paddingClass`)
+- Layout (`<FlexContainer />`, `<Container />`)
+- Components (`<Button />`, `<Card />`, `<Modal />` and more)
+- Design tokens (color, spacing, typography)
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+It follows a semantic, token-driven approach and helps enforce consistent design language across apps.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Tech Stack
 
-## Learn More
+- **Framework:** React (Next.js compatible)
+- **Styling:** Tailwind CSS
+- **Structure:** Custom components + design tokens
+- **Directory Style:** Inspired by React Native and atomic design
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 📁 File Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/components/ui/ # Reusable UI components
+/theme/ # Tokens: colors, spacing, typography
+/types/ # TypeScript interfaces for props
+/styles/ # Global styles (if needed)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## ✨ Features
+
+- 🔁 Responsive design built into token system  
+- 🎨 Swappable color tokens per project (`theme/color.ts`)  
+- ⚙️ Abstracted spacing and layout logic  
+- 🧠 Built from real-world project needs  
+- 📐 Uniform typography inspired by React Native  
+
+---
+
+## 📚 Usage Example
+
+```tsx
+import { Main, FlexContainer, Spacer } from "@/components/ui/Spacer";
+import Title, { Subtitle, Text } from "@/components/ui/Typography";
+import Button from "@/components/ui/Button";
+
+export default function Home() {
+  return (
+    <Main gap="md">
+      <Title>MELLC UI Framework</Title>
+      <Spacer size="lg" />
+      <Text>This text component ensures consistency across the app.</Text>
+      <FlexContainer gap="md">
+        <Button variant="primary">Click Me</Button>
+        <Button variant="secondary">Or Me</Button>
+      </FlexContainer>
+    </Main>
+  );
+}
+
+🧪 Status
+
+🚧 Work in Progress — This framework is actively evolving as I build new projects and refine my product development process.
+🧠 Why I Built It
+
+After working in both web and mobile development, I wanted a system that:
+
+    Felt as structured as React Native
+
+    Took full advantage of Tailwind CSS
+
+    Could be dropped into any project and feel consistent
+
+It started as a tool for myself — now it powers my portfolio and other production apps.
+🔐 License
+
+MIT — feel free to fork, adapt, or contribute.
+✍🏾 Built by Marcus Kimber
+
+Let me know if you want:
+
+    A docs/ folder for detailed component usage
+
+    A CONTRIBUTING.md for collaborators
+
+    A CHANGELOG.md to track updates over time
+
+This README sets the tone: you’re not playing. You’re building systems. 💼🛠️
